@@ -215,7 +215,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         if(autoLocation.isChecked()){
-            String ipTokean = "257935eef18f23";
+            String ipTokean = "";
             String url = "https://ipinfo.io/?token=" + ipTokean;
             JsonObjectRequest ipinfoRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                     new Response.Listener<JSONObject>() {
@@ -246,7 +246,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         else{
             String loc = location.getText().toString();
-            String geoKey = "AIzaSyCKjFH0ANZp2b8Fraew3lyLA4mdUT2YYyA";
+            String geoKey = "";
             String url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + loc + "&key=" + geoKey;
             JsonObjectRequest geoRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                     new Response.Listener<JSONObject>() {
